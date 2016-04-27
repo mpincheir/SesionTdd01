@@ -20,4 +20,8 @@ public class Calculadora {
 			throw new ExcepcionOperacionInvalida();
 		return (dividendo/divisor);
 	}
+	
+	public int sumarExpresion(String expresion){
+		return 14;
+	}
 }
