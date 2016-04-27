@@ -8,7 +8,7 @@ import static org.hamcrest.CoreMatchers.is;
 public class CalculadoraTest {
 
 	@Test
-	public void DosMasTresEsCinco(){
+	public void SumaDosMasTresEsCinco(){
 	
 		Calculadora calculadora = new Calculadora();
 		
@@ -18,7 +18,7 @@ public class CalculadoraTest {
 	}
 	
 	@Test
-	public void MenosUnoYSieteEsSeis(){
+	public void SumaMenosUnoYSieteEsSeis(){
 	
 		Calculadora calculadora = new Calculadora();
 		
@@ -28,7 +28,7 @@ public class CalculadoraTest {
 	}	
 	
 	@Test
-	public void DoscientosMenosSetentaYTresEsCientoveinticiete(){
+	public void RestaDoscientosMenosSetentaYTresEsCientoveinticiete(){
 		
 		Calculadora calculadora = new Calculadora();
 		
@@ -36,5 +36,15 @@ public class CalculadoraTest {
 		
 		assertThat(resultado,is(127));
 	}
+	
+	@Test
+	public void RestaMenosDiezYCincoEsMenosQuince(){
+		
+		Calculadora calculadora = new Calculadora();
+		
+		int resultado = calculadora.restar(-10,5);
+		
+		assertThat(resultado,is(-15));
+	}	
 
 }
