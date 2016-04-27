@@ -16,5 +16,15 @@ public class CalculadoraTest {
 		
 		assertThat(resultado,is(5));
 	}
+	
+	@Test
+	public void MenosUnoYSieteEsSeis(){
+	
+		Calculadora calculadora = new Calculadora();
+		
+		int resultado = calculadora.sumar(-1,7);
+		
+		assertThat(resultado,is(6));
+	}	
 
 }
