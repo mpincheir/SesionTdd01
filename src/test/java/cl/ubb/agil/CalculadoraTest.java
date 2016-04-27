@@ -78,6 +78,14 @@ public class CalculadoraTest {
 		int resultado = calculadora.division(12,0);
 				
 	}
+	
+	@Test 
+	public void ExpresionTresMasCuatroMasSieteEsCatorce(){
+
+		int resultado = calculadora.sumarExpresion("3+4+7");
+		
+		assertThat(resultado,is(14));
+	}
 		
 
 }
