@@ -15,7 +15,8 @@ public class Calculadora {
 		return num1-num2;
 	}
 	
-	public int division(int dividendo, int divisor){		
-		return 4;
+	public int division(int dividendo, int divisor){
+		
+		return (dividendo/divisor);
 	}
 }

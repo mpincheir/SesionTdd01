@@ -62,6 +62,14 @@ public class CalculadoraTest {
 		int resultado = calculadora.division(12,3);
 		
 		assertThat(resultado,is(4));
-	}	
+	}
+	
+	@Test
+	public void DivisionTreintaYSeisYSeisEsSeis(){
+		
+		int resultado = calculadora.division(36,6);
+		
+		assertThat(resultado,is(6));
+	}
 
 }
