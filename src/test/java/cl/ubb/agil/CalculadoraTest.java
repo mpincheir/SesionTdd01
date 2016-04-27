@@ -86,6 +86,14 @@ public class CalculadoraTest {
 		
 		assertThat(resultado,is(14));
 	}
+	
+	@Test 
+	public void ExpresionDosMasSeisMasOchoEsDieciseis(){
+
+		int resultado = calculadora.sumarExpresion("2+6+8");
+		
+		assertThat(resultado,is(16));
+	}
 		
 
 }
