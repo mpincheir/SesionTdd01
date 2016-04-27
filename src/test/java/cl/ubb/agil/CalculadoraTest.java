@@ -56,7 +56,7 @@ public class CalculadoraTest {
 	}
 	
 	@Test
-	public void DivisionDoceYTresEsCuatro(){
+	public void DivisionDoceYTresEsCuatro() throws ExcepcionOperacionInvalida {
 		
 		
 		int resultado = calculadora.division(12,3);
@@ -65,7 +65,7 @@ public class CalculadoraTest {
 	}
 	
 	@Test
-	public void DivisionTreintaYSeisYSeisEsSeis(){
+	public void DivisionTreintaYSeisYSeisEsSeis() throws ExcepcionOperacionInvalida{
 		
 		int resultado = calculadora.division(36,6);
 		
@@ -73,11 +73,10 @@ public class CalculadoraTest {
 	}
 	
 	@Test (expected=ExcepcionOperacionInvalida.class)
-	public void DivisionDeDoceYCeroLanzaExcepcion(){
+	public void DivisionDeDoceYCeroLanzaExcepcion() throws ExcepcionOperacionInvalida{
 		
 		int resultado = calculadora.division(12,0);
-		
-		assertThat(resultado,is(6));
+				
 	}
 		
 

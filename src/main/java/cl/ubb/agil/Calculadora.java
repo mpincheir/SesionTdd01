@@ -15,8 +15,9 @@ public class Calculadora {
 		return num1-num2;
 	}
 	
-	public int division(int dividendo, int divisor){
-		
+	public int division(int dividendo, int divisor) throws ExcepcionOperacionInvalida{
+		if(divisor==0)
+			throw new ExcepcionOperacionInvalida();
 		return (dividendo/divisor);
 	}
 }
