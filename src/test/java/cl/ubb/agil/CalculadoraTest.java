@@ -7,10 +7,19 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class CalculadoraTest {
 
+
+	private Calculadora calculadora;
+
+	@Before
+	public void setup() {
+		
+		calculadora = new Calculadora();
+	}
+	
+	
 	@Test
 	public void SumaDosMasTresEsCinco(){
-	
-		Calculadora calculadora = new Calculadora();
+			
 		
 		int resultado = calculadora.sumar(2,3);
 		
@@ -19,8 +28,7 @@ public class CalculadoraTest {
 	
 	@Test
 	public void SumaMenosUnoYSieteEsSeis(){
-	
-		Calculadora calculadora = new Calculadora();
+			
 		
 		int resultado = calculadora.sumar(-1,7);
 		
@@ -30,7 +38,7 @@ public class CalculadoraTest {
 	@Test
 	public void RestaDoscientosMenosSetentaYTresEsCientoveinticiete(){
 		
-		Calculadora calculadora = new Calculadora();
+	
 		
 		int resultado = calculadora.restar(200,73);
 		
@@ -40,11 +48,19 @@ public class CalculadoraTest {
 	@Test
 	public void RestaMenosDiezYCincoEsMenosQuince(){
 		
-		Calculadora calculadora = new Calculadora();
 		
 		int resultado = calculadora.restar(-10,5);
 		
 		assertThat(resultado,is(-15));
+	}
+	
+	@Test
+	public void DivisionDoceYTresEsCuatro(){
+		
+		
+		int resultado = calculadora.division(12,3);
+		
+		assertThat(resultado,is(4));
 	}	
 
 }
